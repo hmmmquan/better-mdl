@@ -21580,8 +21580,7 @@
               ),
           window.location.pathname.includes("/people/") && a(r(4712)),
           window.location.pathname.includes("/list/") && a(r(8315)),
-          window.location.pathname.includes(`${f}/lists`),
-          /^\/\d+-/.test(window.location.pathname) && a(r(151)))
+          window.location.pathname.includes(`${f}/lists`))
         ) {
           var y = document.createElement("a");
           ((y.className = "btn white pull-right"),
@@ -21662,7 +21661,11 @@
         (window.location.pathname.includes("/dramalist/") && a(r(4826)),
           window.location.pathname.includes(`${f}/stats`) && a(r(4558)),
           window.location.pathname.includes("/account/profile") && a(r(2426)),
-          h.match(/https:\/\/mydramalist\.com\/\d+\-.+/) && a(r(6483)),
+          /^\/\d+-/.test(window.location.pathname) &&
+            (() => {
+              r(151);
+              r(2927);
+            })(),
           (window.location.href.includes("/shows") ||
             window.location.href.includes("/search")) &&
             a(r(6419)));
